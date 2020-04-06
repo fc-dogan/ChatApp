@@ -1,0 +1,51 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="panel panel-success">
+        <div class="panel-heading" id="accordion">
+          <span class="glyphicon glyphicon-comment"></span> Start Chat
+          <div class="btn-group pull-right">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+               <span class="caret"></span>
+              </button>
+          </div>
+        </div>
+        <div class="panel-collapse collapse" id="collapseOne">
+          <div class="panel-body">
+            <ul id="messageList" class="chat">
+            </ul>
+          </div>
+          <div class="panel-footer">
+            <div class="input-group">
+              <div class="row">
+
+                <div class="col-sm-6">
+                  <input type="text" id="userName" class="form-control input-sm" placeholder="Type your name" />
+                  
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" id="userMessage" class="form-control input-sm" placeholder="Type your message here.." />
+                </div>
+
+              </div>
+
+              <span class="input-group-btn">
+                <input type="button" value="send" id="sendMessage" class="btn btn-danger btn-sm">
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</div>
+<script src="~/lib/signalr/signalr.js"></script>
